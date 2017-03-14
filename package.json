@@ -1,0 +1,39 @@
+{
+  "name": "koop-seeclickfix",
+  "version": "0.0.1",
+  "description": "A Koop Provider for the SeeClickFix API",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "standard && tape test/*.js | tap-spec"
+  },
+  "dependencies": {
+    "config": "^1.25.1",
+    "koop": "^3.4.0",
+    "request": "^2.79.0"
+  },
+  "author": "Alexander Harris",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "nock": "^9.0.2",
+    "standard": "^8.6.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akharris/koop-provider-seeclickfix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akharris/koop-provider-seeclickfix/issues"
+  },
+  "homepage": "https://github.com/akharris/koop-provider-seeclickfix",
+  "keywords": [
+    "koop",
+    "provider",
+    "seeclickfix"
+  ]
+}
