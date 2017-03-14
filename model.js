@@ -67,6 +67,11 @@ function formatFeature (issue) {
     feature.properties.request_type_url   = issue.request_type.url
     feature.properties.request_type_id    = issue.request_type.id
     feature.properties.request_type_related_issues_url   = issue.request_type.related_issues_url
+  } else {
+    feature.properties.request_type_title = null
+    feature.properties.request_type_url   = null
+    feature.properties.request_type_id    = null
+    feature.properties.request_type_related_issues_url   = null
   }
   // But we also want to translate a few of the date fields so they are easier to use downstream
   const dateFields = [
