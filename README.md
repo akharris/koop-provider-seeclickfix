@@ -3,6 +3,9 @@
 SeeClickFix API Documentation: http://dev.seeclickfix.com/
 Koop Provider Documentation: https://koopjs.github.io/docs/specs/provider/
 
+Koop Providers connect third-party APIs to both the GeoJSON and Esri Feature Services
+ecosystems
+
 ## Files
 - `index.js`: Main Koop Provider Export
 - `model.js`: Translates remote API to GeoJSON

@@ -14,8 +14,8 @@ function Model (koop) {}
 Model.prototype.getData = function (req, callback) {
   // Call the remote API with our developer key
 
-  const key = config.trimet.key
-  request('https://test.seeclickfix.com/api/v2/issues?place_url=district-of-columbia', (err, res, body) => {
+  //const key = config.seeclickfix.key
+  request('https://test.seeclickfix.com/api/v2/issues?place_url=district-of-columbia&per_page=100', (err, res, body) => {
     if (err) return callback(err)
     // translate the response into geojson
     const geojson = translate(body)

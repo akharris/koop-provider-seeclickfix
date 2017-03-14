@@ -10,6 +10,9 @@
     "start": "node server.js",
     "test": "standard && tape test/*.js | tap-spec"
   },
+  "engines": {
+    "node": "6.3.0"
+  },
   "dependencies": {
     "config": "^1.25.1",
     "koop": "^3.4.0",
