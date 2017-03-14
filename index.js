@@ -10,7 +10,7 @@ const provider = {
   type: 'provider',
   name: 'seeclickfix',
   hosts: false,
-  disableIdParam: true,
+  disableIdParam: false,
   Controller: require('./controller'),
   Model: require('./model'),
   routes: require('./routes'),

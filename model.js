@@ -13,14 +13,15 @@ function Model (koop) {}
 // This is the only public function you need to implement
 Model.prototype.getData = function (req, callback) {
   // Call the remote API with our developer key
-
+ 
+  const reqUrl = `https://test.seeclickfix.com/api/v2/issues?place_url=${req.params.id}&per_page=100`
   //const key = config.seeclickfix.key
-  request('https://test.seeclickfix.com/api/v2/issues?place_url=district-of-columbia&per_page=100', (err, res, body) => {
+  request(reqUrl, (err, res, body) => {
     if (err) return callback(err)
     // translate the response into geojson
     const geojson = translate(body)
-    // Cache data for 10 seconds at a time by setting the ttl or "Time to Live"
-    geojson.ttl = 10
+    // Cache data for half an hour
+     geojson.ttl = 1800
     // hand off the data to Koop
     callback(null, geojson)
   })
