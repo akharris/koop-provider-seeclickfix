@@ -22,9 +22,12 @@ test('should properly fetch from the API and translate features', t => {
     t.equal(feature.geometry.type, 'Point', 'creates point geometry')
     t.equal(feature.geometry.coordinates, [0, 0], 'translates geometry correctly')
     t.ok(feature.properties, 'creates attributes')
-    t.equal(feature.properties.expires, new Date(1484268019000).toISOString(), 'translates expires field correctly')
-    t.equal(feature.properties.expires, new Date(1484268019000).toISOString(), 'translates serviceDate field correctly')
-    t.equal(feature.properties.expires, new Date(1484268019000).toISOString(), 'translates time field correctly')
+
+    const createdAt = feature.properties.created_at
+    const updatedAt = feature.properties.updated_at
+
+    t.equal(createdAt, '2016-09-26T09:45:24-04:00', 'translates created_at field correctly')
+    t.equal(updatedAt, '2016-09-26T09:45:24-04:00', 'translates updated_at field correctly')
     t.end()
   })
 })
