@@ -3,6 +3,10 @@
 SeeClickFix API Documentation: http://dev.seeclickfix.com/
 Koop Provider Documentation: https://koopjs.github.io/docs/specs/provider/
 
+SeeClickFix Demo App deployed at https://koop-seeclickfix.herokuapp.com
+
+Example Query: https://koop-seeclickfix.herokuapp.com/seeclickfix/district-of-columbia/FeatureServer/0/query
+
 Koop Providers connect third-party APIs to both the GeoJSON and Esri Feature Services
 ecosystems
 
