@@ -1,9 +1,7 @@
 COMPONENT koop-seeclickfix-sample-provider
-ROUTE -m GET /seeclickfix/*
+ROUTE *
 FROM node:10
-RUN mkdir -p /srv/www/koop
-ADD package.json /srv/www/koop
-WORKDIR /srv/www/koop
+COPY package.json package.json
 RUN npm install
-ADD . /srv/www/koop
-SERVICE node /srv/www/koop/server.js
+COPY ./ ./
+SERVICE node server.js
